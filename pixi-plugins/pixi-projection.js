@@ -3141,7 +3141,9 @@ this.PIXI.projection = this.PIXI.projection || {};
             const dx2 = mat[4] * mat[15] - mat[7] * mat[12];
             const dy2 = mat[5] * mat[15] - mat[7] * mat[13];
 
-            return dx1 * dy2 - dx2 * dy1 > 0;
+            let result = dx1 * dy2 - dx2 * dy1 > 0;
+            // console.log(`isFrontFace: ${result}`)
+            return result;
         }
 
         /**
