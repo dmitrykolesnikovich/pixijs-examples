@@ -10,7 +10,7 @@
     "url": "git+https://github.com/pixijs/examples.git"
   },
   "bugs": {
-    "url": "https://github.com/pixijs/examples/issues"
+    "url": "https://github.co--interval 0.1m/pixijs/examples/issues"
   },
   "scripts": {
     "less": "lessc src/less/pixi-examples.less dest/css/pixi-examples.min.css --clean-css --source-map",
@@ -18,7 +18,7 @@
     "less-dev": "lessc src/less/pixi-examples.less dest/css/pixi-examples.min.css",
     "js-dev": "terser src/js/pixi-examples.js -b -o dest/js/pixi-examples.min.js",
     "build": "npm run less && npm run js",
-    "watch": "watch \"npm run less-dev && npm run js-dev\" src --wait 0.1 --interval 0.1",
+    "watch": "watch \"npm run less-dev && npm run js-dev\" src --wait 0.1 --interval 0.1"
   },
   "devDependencies": {
     "less": "^3.11.1",

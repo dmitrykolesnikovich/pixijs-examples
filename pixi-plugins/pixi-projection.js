@@ -44,8 +44,8 @@ this.PIXI.projection = this.PIXI.projection || {};
     void main(void){
         vec4 color;
         %forloop%
-        // gl_FragColor = color * vColor;
-        gl_FragColor = vec4(1, 0, 0, 1);
+        gl_FragColor = color * vColor;
+        // gl_FragColor = vec4(1, 0, 0, 1);
     }
     `;
 
@@ -3140,10 +3140,7 @@ this.PIXI.projection = this.PIXI.projection || {};
             const dy1 = mat[1] * mat[15] - mat[3] * mat[13];
             const dx2 = mat[4] * mat[15] - mat[7] * mat[12];
             const dy2 = mat[5] * mat[15] - mat[7] * mat[13];
-
-            let result = dx1 * dy2 - dx2 * dy1 > 0;
-            // console.log(`isFrontFace: ${result}`)
-            return result;
+            return dx1 * dy2 - dx2 * dy1 > 0;
         }
 
         /**
